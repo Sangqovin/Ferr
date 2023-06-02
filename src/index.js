@@ -37,7 +37,7 @@ const shardLogs = new Discord.WebhookClient({
 
 const manager = new Discord.ShardingManager('./src/bot.js', {
     totalShards: 'auto',
-    token: 'MTExMzI3MzIzNTU5Mzc2ODk5Mg.GSP95d.1ZiO1lzCR48jlT10oCc8oUaEcgV0LbcNXFxCII',//process.env.DISCORD_TOKEN,
+    token: process.env.DISCORD_TOKEN,
     respawn: true
 });
 if (process.env.TOPGG_TOKEN) {
